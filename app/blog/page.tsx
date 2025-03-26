@@ -50,7 +50,7 @@ const blogPosts = [
 ];
 
 export const metadata = {
-  title: "Blog | Your Name",
+  title: "Blog | Pouria Ghasemi",
   description: "Articles and thoughts on web development, design, and technology",
 };
 
@@ -59,9 +59,11 @@ export default function BlogPage() {
     <div className="container-wide py-16">
       <header className="mb-12 text-center">
         <h1 className="text-4xl font-bold mb-4">Blog</h1>
-        <p className="text-black/70 dark:text-white/70 max-w-2xl mx-auto">
-          Thoughts, learnings, and insights on web development, design, and technology.
-        </p>
+        <div className="border border-black/10 rounded-lg p-6 bg-white shadow-sm max-w-2xl mx-auto">
+          <p className="text-black/70">
+            Thoughts, learnings, and insights on web development, design, and technology.
+          </p>
+        </div>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -80,23 +82,25 @@ export default function BlogPage() {
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold mb-4">Subscribe to the Newsletter</h2>
-        <p className="text-black/70 dark:text-white/70 mb-6 max-w-2xl mx-auto">
-          Get notified when I publish new articles and resources. No spam, unsubscribe any time.
-        </p>
-        <form className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="flex-grow px-4 py-2 rounded-md border border-input bg-background"
-            required
-          />
-          <button
-            type="submit"
-            className="px-6 py-2 bg-foreground text-background rounded-md transition-opacity hover:opacity-90"
-          >
-            Subscribe
-          </button>
-        </form>
+        <div className="border border-black/10 rounded-lg p-6 bg-white shadow-sm max-w-2xl mx-auto">
+          <p className="text-black/70 mb-6">
+            Get notified when I publish new articles and resources. No spam, unsubscribe any time.
+          </p>
+          <form className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-grow px-4 py-2 rounded-md border border-input bg-background"
+              required
+            />
+            <button
+              type="submit"
+              className="px-6 py-2 bg-black text-white rounded-md"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

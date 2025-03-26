@@ -27,7 +27,7 @@ export default function BlogPostCard({
   return (
     <Link 
       href={`/blog/${slug}`}
-      className="block group border border-black/10 dark:border-white/10 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg"
+      className="block border border-black/10 rounded-lg overflow-hidden bg-white shadow-sm"
     >
       <article className="flex flex-col h-full">
         {coverImage && (
@@ -36,24 +36,24 @@ export default function BlogPostCard({
               src={coverImage}
               alt={title}
               fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className="object-cover"
             />
           </div>
         )}
         <div className="p-6 flex flex-col flex-grow">
-          <time dateTime={date} className="text-sm text-black/60 dark:text-white/60 mb-2">
+          <time dateTime={date} className="text-sm text-black/60 mb-2">
             {formattedDate}
           </time>
-          <h3 className="text-xl font-medium mb-2 transition-colors group-hover:text-black/80 dark:group-hover:text-white/80">
+          <h3 className="text-xl font-medium mb-2">
             {title}
           </h3>
-          <p className="text-black/70 dark:text-white/70 mb-4 flex-grow">{excerpt}</p>
+          <p className="text-black/70 mb-4 flex-grow">{excerpt}</p>
           {tags.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-auto">
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-2 py-1 bg-black/5 dark:bg-white/10 text-xs rounded"
+                  className="px-2 py-1 bg-black/5 text-xs rounded"
                 >
                   {tag}
                 </span>

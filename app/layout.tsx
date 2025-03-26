@@ -3,7 +3,6 @@ import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
-import PageTransition from "./components/PageTransition";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,8 +17,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name | Portfolio",
-  description: "Personal portfolio showcasing projects and thoughts",
+  title: "Pouria Ghasemi | Portfolio",
+  description: "Personal portfolio showcasing projects and thoughts by Pouria Ghasemi",
 };
 
 export default function RootLayout({
@@ -32,9 +31,7 @@ export default function RootLayout({
       <body className="antialiased bg-background text-foreground min-h-screen flex flex-col">
         <Navigation />
         <main className="flex-grow">
-          <PageTransition>
-            {children}
-          </PageTransition>
+          {children}
         </main>
         <Footer />
       </body>

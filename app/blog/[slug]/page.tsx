@@ -209,7 +209,7 @@ export async function generateMetadata({ params }: Props) {
   }
   
   return {
-    title: `${post.title} | Your Name`,
+    title: `${post.title} | Pouria Ghasemi`,
     description: post.content.substring(0, 160),
   };
 }

@@ -19,13 +19,13 @@ export default function ProjectCard({
   githubUrl,
 }: ProjectCardProps) {
   return (
-    <div className="group flex flex-col overflow-hidden border border-black/10 dark:border-white/10 rounded-lg transition-all duration-300 hover:shadow-lg">
+    <div className="flex flex-col overflow-hidden border border-black/10 rounded-lg bg-white shadow-sm">
       <div className="relative h-48 overflow-hidden">
         <Image
           src={imageUrl}
           alt={title}
           fill
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          className="object-cover"
         />
       </div>
       <div className="p-6 flex flex-col flex-grow">
@@ -45,7 +45,7 @@ export default function ProjectCard({
           {projectUrl && (
             <Link 
               href={projectUrl}
-              className="px-4 py-2 bg-foreground text-background rounded-md flex-1 text-center transition-opacity hover:opacity-90"
+              className="px-4 py-2 bg-black text-white rounded-md flex-1 text-center"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -55,7 +55,7 @@ export default function ProjectCard({
           {githubUrl && (
             <Link 
               href={githubUrl}
-              className="px-4 py-2 bg-transparent border border-black/20 dark:border-white/20 rounded-md flex-1 text-center transition-opacity hover:opacity-70"
+              className="px-4 py-2 bg-transparent border border-black/20 rounded-md flex-1 text-center"
               target="_blank"
               rel="noopener noreferrer"
             >

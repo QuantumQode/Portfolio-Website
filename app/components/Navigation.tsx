@@ -9,16 +9,16 @@ export default function Navigation() {
   return (
     <nav className="py-6 w-full">
       <div className="max-w-4xl mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="font-medium text-lg transition-opacity hover:opacity-70">
-          Your Name
+        <Link href="/" className="font-medium text-lg">
+          Pouria Ghasemi
         </Link>
         <ul className="flex items-center gap-8">
           <li>
             <Link 
               href="/" 
-              className={`transition-all ${pathname === '/' 
+              className={`${pathname === '/' 
                 ? 'border-b-2 border-foreground' 
-                : 'hover:opacity-70'}`}
+                : ''}`}
             >
               Home
             </Link>
@@ -26,9 +26,9 @@ export default function Navigation() {
           <li>
             <Link 
               href="/projects" 
-              className={`transition-all ${pathname === '/projects' 
+              className={`${pathname === '/projects' 
                 ? 'border-b-2 border-foreground' 
-                : 'hover:opacity-70'}`}
+                : ''}`}
             >
               Projects
             </Link>
@@ -36,9 +36,9 @@ export default function Navigation() {
           <li>
             <Link 
               href="/blog" 
-              className={`transition-all ${pathname === '/blog' 
+              className={`${pathname === '/blog' 
                 ? 'border-b-2 border-foreground' 
-                : 'hover:opacity-70'}`}
+                : ''}`}
             >
               Blog
             </Link>
